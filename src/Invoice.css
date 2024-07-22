@@ -1,0 +1,202 @@
+body {
+    font-family: ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  
+  .invoice {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fcfffb;
+    border: 5px solid #070707;
+    border-radius: 20px;
+    
+  }
+
+  .invoice-details {
+    text-align: left;
+  }
+  
+  .invoice-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .invoice-details,
+  .products,
+  .discount,
+  .actions {
+    margin-bottom: 10px;
+  }
+  
+  .invoice-details label,
+  .products .product-item label,
+  .discount label {
+    display: block;
+    margin-bottom: 5px;
+    
+  }
+  
+  .invoice-details input,
+  .products .product-item input,
+  .discount input,
+  .invoice-details select {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    
+  }
+  
+  .products {
+    text-align: left;
+  }
+  
+  .products .product-item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .products .product-item button {
+    align-self: flex-start;
+    padding: 8px 15px;
+    margin-top: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .products .product-item button:hover {
+    background-color: #cc0000;
+  }
+  
+.add-new-line button{
+    border: #ececec;
+    padding: 5px;
+    color: white;
+    background-color: #0466f9;
+    cursor: pointer;
+}
+
+  .actions button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .actions button:hover {
+    background-color: #0056b3;
+  }
+  
+  .totals p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+.preview-order-details h4 {
+    text-align: left;
+
+}
+
+
+.add-coupon {
+  margin: 10px;
+  text-align: center;
+}
+
+.add-coupon button {
+  /* border: #00fb19; */
+  background-color: #007bff;
+  color: rgb(246, 246, 246);
+  cursor: pointer;
+}
+
+
+
+/* your order row setting */
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+  
+  .left,
+  .right {
+    flex: 0 0 48%;
+  }
+  
+  .left p,
+  .right p {
+    margin: 5px 0;
+  }
+
+  /* amount row setting */
+
+  
+
+
+  .preview {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+  }
+  
+  .preview h2 {
+    margin-top: 0;
+  }
+  
+  .preview-container {
+    border: 1px solid #ccc;
+    padding: 40px;
+    border-radius: 10px;
+    background: #f9f9f9;
+  }
+  
+  .preview-container h3 {
+    margin-top: 0;
+  }
+  
+  .preview-order-details p {
+    margin: 5px 0;
+  }
+
+  .actions {
+    padding: 5px;
+    color: rgb(1, 115, 255);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+ 
+  
+  
+  /* Media Queries for Responsiveness */
+  @media (min-width: 768px) {
+    .invoice {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .invoice-container {
+      width: 48%;
+    }
+  
+    .preview {
+      width: 48%;
+    }
+  }
+  
