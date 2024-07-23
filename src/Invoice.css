@@ -55,6 +55,13 @@ body {
     text-align: left;
   }
   
+
+/* products input section */
+.products input {
+  width: 100%;
+  margin-right: 1px;
+}
+
   .products .product-item {
     display: flex;
     flex-direction: column;
@@ -109,10 +116,13 @@ body {
 
 }
 
-
 .add-coupon {
+  
   margin: 10px;
   text-align: center;
+}
+.add-coupon input {
+  width: 40%;
 }
 
 .add-coupon button {
@@ -122,31 +132,11 @@ body {
   cursor: pointer;
 }
 
-
-
-/* your order row setting */
-
-/* .row {
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-  }
+/* discount input section */
+.discount input {
+  width: 50%;
+}
   
-  .left,
-  .right {
-    flex: 0 0 48%;
-  }
-  
-  .left p,
-  .right p {
-    margin: 5px 0;
-  } */
-
-  /* amount row setting */
-
-  
-
-
   .preview {
     margin-top: 20px;
     padding: 20px;
@@ -174,14 +164,7 @@ body {
     margin: 5px 0;
   }
 
-  /* .actions {
-    padding: 5px;
-    color: rgb(1, 115, 255);
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-  }
-  */
+ 
   .actions button {
     padding: 10px;
     color: rgb(255, 255, 255);

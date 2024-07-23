@@ -117,7 +117,7 @@ const Invoice = () => {
   };
 
   const handleApplyCoupon = () => {
-    
+    // Add logic to validate and apply the coupon
     if (coupon === 'DISCOUNT100') {
       setCouponDiscount(100);
     } else {
@@ -179,48 +179,59 @@ const Invoice = () => {
           </div>
         </div>
         <div className="products">
-          <h2>Product</h2>
-          {invoiceDetails.items.map((item, index) => (
-            <div key={index} className="product-item">
-              <div className="form-group">
-                <label><b>Items</b></label>
-                <input
-                  type="text"
-                  name="description"
-                  value={item.description}
-                  onChange={(e) => handleItemChange(index, e)}
-                />
-              </div>
-              <div className="form-group">
-                <label><b>Quantity</b></label>
-                <input
-                  type="number"
-                  name="quantity"
-                  value={item.quantity}
-                  onChange={(e) => handleItemChange(index, e)}
-                />
-              </div>
-              <div className="form-group">
-                <label><b>Price</b></label>
-                <input
-                  type="number"
-                  name="price"
-                  value={item.price}
-                  onChange={(e) => handleItemChange(index, e)}
-                />
-              </div>
-              <div className="form-group">
-                <label><b>Tax (%)</b></label>
-                <input
-                  type="number"
-                  name="tax"
-                  value={item.tax}
-                  onChange={(e) => handleItemChange(index, e)}
-                />
-              </div>
-              <button onClick={() => removeItem(index)}>Remove</button>
-            </div>
-          ))}
+          <h2>Products</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Tax (%)</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {invoiceDetails.items.map((item, index) => (
+                <tr key={index}>
+                  <td>
+                    <input
+                      type="text"
+                      name="description"
+                      value={item.description}
+                      onChange={(e) => handleItemChange(index, e)}
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      name="quantity"
+                      value={item.quantity}
+                      onChange={(e) => handleItemChange(index, e)}
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      name="price"
+                      value={item.price}
+                      onChange={(e) => handleItemChange(index, e)}
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      name="tax"
+                      value={item.tax}
+                      onChange={(e) => handleItemChange(index, e)}
+                    />
+                  </td>
+                  <td>
+                    <button onClick={() => removeItem(index)}>Remove</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
           <div className='add-new-line'>
             <button onClick={addItem}>Add New Line</button>
           </div>
@@ -269,28 +280,15 @@ const Invoice = () => {
           <div className="preview-order-details">
             <h4><b>Your Order</b></h4>
             <hr></hr>
-            <div className="table-container">
-              <table className="table">
-                <tbody>
-                  <tr>
-                    <td>Due Date:</td>
-                    <td>{invoiceDetails.dueDate}</td>
-                  </tr>
-                  <tr>
-                    <td>Bill to:</td>
-                    <td>{invoiceDetails.email}</td>
-                  </tr>
-                  <tr>
-                    <td>Subject:</td>
-                    <td>{invoiceDetails.subject}</td>
-                  </tr>
-                  <tr>
-                    <td>Currency:</td>
-                    <td>{invoiceDetails.currency}</td>
-                  </tr>
-                </tbody>
-          
-              </table>
+            <div className="row">
+              <div className="left">
+                <p>Due Date: {invoiceDetails.dueDate}</p>
+                <p>Bill to: {invoiceDetails.email}</p>
+              </div>
+              <div className="right">
+                <p>Subject: {invoiceDetails.subject}</p>
+                <p>Currency: {invoiceDetails.currency}</p>
+              </div>
             </div>
             {invoiceDetails.items.map((item, index) => (
               <p key={index}>
