@@ -126,7 +126,7 @@ body {
 
 /* your order row setting */
 
-.row {
+/* .row {
     display: flex;
     justify-content: space-between;
     margin: auto;
@@ -140,7 +140,7 @@ body {
   .left p,
   .right p {
     margin: 5px 0;
-  }
+  } */
 
   /* amount row setting */
 

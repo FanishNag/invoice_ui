@@ -117,8 +117,7 @@ const Invoice = () => {
   };
 
   const handleApplyCoupon = () => {
-    // Add logic to validate and apply the coupon
-    // For demonstration, let's assume a fixed discount of 100 if coupon is "DISCOUNT100"
+    
     if (coupon === 'DISCOUNT100') {
       setCouponDiscount(100);
     } else {
@@ -270,15 +269,28 @@ const Invoice = () => {
           <div className="preview-order-details">
             <h4><b>Your Order</b></h4>
             <hr></hr>
-            <div className="row">
-              <div className="left">
-                <p>Due Date: {invoiceDetails.dueDate}</p>
-                <p>Bill to: {invoiceDetails.email}</p>
-              </div>
-              <div className="right">
-                <p>Subject: {invoiceDetails.subject}</p>
-                <p>Currency: {invoiceDetails.currency}</p>
-              </div>
+            <div className="table-container">
+              <table className="table">
+                <tbody>
+                  <tr>
+                    <td>Due Date:</td>
+                    <td>{invoiceDetails.dueDate}</td>
+                  </tr>
+                  <tr>
+                    <td>Bill to:</td>
+                    <td>{invoiceDetails.email}</td>
+                  </tr>
+                  <tr>
+                    <td>Subject:</td>
+                    <td>{invoiceDetails.subject}</td>
+                  </tr>
+                  <tr>
+                    <td>Currency:</td>
+                    <td>{invoiceDetails.currency}</td>
+                  </tr>
+                </tbody>
+          
+              </table>
             </div>
             {invoiceDetails.items.map((item, index) => (
               <p key={index}>
