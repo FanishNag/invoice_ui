@@ -174,14 +174,53 @@ body {
     margin: 5px 0;
   }
 
-  .actions {
+  /* .actions {
     padding: 5px;
     color: rgb(1, 115, 255);
     border: none;
     cursor: pointer;
     border-radius: 10px;
   }
- 
+  */
+  .actions button {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border: none;
+    margin: 0 40px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  /* table desgin */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+  
+  .table-container {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .left, .right {
+    flex: 1;
+  }
   
   
   /* Media Queries for Responsiveness */

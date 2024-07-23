@@ -287,15 +287,27 @@ const Invoice = () => {
             ))}
             <h4><b>Amount</b></h4>
             <hr></hr>
-            <div className='row-1'>
-              <div className='left'>
-                <p>Subtotal: {totals.subtotal.toFixed(2)} {invoiceDetails.currency}</p>
-                <p>Discount: {totals.totalDiscount.toFixed(2)} {invoiceDetails.currency}</p>
-                <div className='right'>
-                  <p>Tax: {totals.totalTax.toFixed(2)} {invoiceDetails.currency}</p>
-                  <p>Total: {totals.total.toFixed(2)} {invoiceDetails.currency}</p>
-                </div>
-              </div>
+            <div className="table-container">
+              <table className="table">
+                <tbody>
+                  <tr>
+                    <td>Subtotal:</td>
+                    <td>{totals.subtotal.toFixed(2)} {invoiceDetails.currency}</td>
+                  </tr>
+                  <tr>
+                    <td>Discount:</td>
+                    <td>{totals.totalDiscount.toFixed(2)} {invoiceDetails.currency}</td>
+                  </tr>
+                  <tr>
+                    <td>Tax:</td>
+                    <td>{totals.totalTax.toFixed(2)} {invoiceDetails.currency}</td>
+                  </tr>
+                  <tr>
+                    <td>Total:</td>
+                    <td>{totals.total.toFixed(2)} {invoiceDetails.currency}</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
